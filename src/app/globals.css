@@ -3,25 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	height: 100vh;
+	width: 100vw;
+}
+@layer base {
+	html {
+		font-family: "Quicksand", sans-serif;
+		font-size: 0.9rem;
+	}
+}
+
+@layer components {
+	.btn_m {
+		@apply bg-neutral-100  hover:bg-gray-100 text-neutral-600  font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+	}
+
+	.panel_chat_grid {
+		grid-template-rows: 0.1fr 1fr 0.1fr;
+	}
+
+	.input_card {
+		outline-color: transparent;
+		background-color: white;
+	}
+	.input_card:focus {
+		height: 100%;
+		padding: 0px;
+		margin: 0;
+	}
+	input[disabled] {
+		background-color: white; /* Cambia el color de fondo */
+	}
 }
