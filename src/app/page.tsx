@@ -1,4 +1,4 @@
-import Link from "next/link";
-export default function HomePage() {
-	return <Link href="/auth">Hola</Link>;
+import NavBar from "@/components/NavBar";
+export default async function HomePage() {
+	return <div>Home</div>;
 }

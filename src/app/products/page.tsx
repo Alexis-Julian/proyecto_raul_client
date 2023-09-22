@@ -1,9 +1,11 @@
 import NavBar from "@/components/NavBar";
 
-export default function HomeProduct() {
+export default async function HomeProduct() {
 	return (
 		<>
-			<NavBar />
+			<div className="">
+				<div className="bg-primary-color h-full w-full">Estas en productos</div>
+			</div>
 		</>
 	);
 }
